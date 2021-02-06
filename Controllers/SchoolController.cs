@@ -14,6 +14,8 @@ namespace SchoolMVC.Controllers
                 Id = Guid.NewGuid().ToString(),
                 FoundationYear = 1970
             };
+
+            ViewBag.SomethingStrange = "This comes from controller";
             return View(school);
         }
     }
