@@ -11,8 +11,7 @@ namespace SchoolMVC.Controllers
             School school = new School()
             {
                 Name = "Maria Inmaculada",
-                Id = Guid.NewGuid().ToString(),
-                FoundationYear = 1970
+                YearFoundation = 1970
             };
 
             ViewBag.SomethingStrange = "This comes from controller";
