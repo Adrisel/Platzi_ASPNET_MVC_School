@@ -1,0 +1,14 @@
+﻿@model Subject
+
+@{
+    ViewData["Title"] = "Subject Information";
+    Layout = "_SimpleLayout";
+}
+<h1>@ViewData["Title"]</h1>
+<h2>Name: @Model.Name </h2>
+
+<strong>From Partial View</strong>
+<partial name="SimpleSubject"></partial>
+<p>
+    @ViewBag.Date
+</p>

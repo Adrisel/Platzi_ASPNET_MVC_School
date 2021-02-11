@@ -1,0 +1,13 @@
+@model List<Subject>
+
+@{
+    ViewData["Title"] = "Multiple Subject Information";
+    Layout = "_SimpleLayout";
+}
+<h1>@ViewData["Title"]</h1>
+<h2>From patial view </h2>
+
+@foreach (var subject in Model)
+{
+    <partial name= "SimpleSubject" model=subject/>
+}
