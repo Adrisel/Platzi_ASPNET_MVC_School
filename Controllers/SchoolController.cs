@@ -11,6 +11,10 @@ namespace SchoolMVC.Controllers
             School school = new School()
             {
                 Name = "Maria Inmaculada",
+                Country = "Bolivia",
+                City = "La Paz",
+                Address = "Av. Armentia",
+                SchoolType = SchoolType.Elementary,
                 YearFoundation = 1970
             };
 

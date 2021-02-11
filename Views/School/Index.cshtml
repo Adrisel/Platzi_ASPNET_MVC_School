@@ -4,9 +4,17 @@
     ViewData["Title"] = "Home School";
     Layout = "_SimpleLayout";
 }
-<h1>School</h1>
-<h2>Address: @Model.Name </h2>
+<h1>@ViewData["Title"]</h1>
+<h2>Name: @Model.Name </h2>
+<h2>@Model.SchoolType</h2>
+<address>
+    <p>Address: @Model.Address</p>
+    <P>Country: @Model.Country</P>
+    <p>City: @Model.City</p>
+</address>
 <h2><strong>Foundation Year: </strong> @Model.YearFoundation</h2>
 <p>
     @ViewData["SomethingStrange"]
 </p>
+
+<partial name="SimpleSubject"/>
