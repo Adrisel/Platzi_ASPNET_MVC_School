@@ -6,8 +6,26 @@
 }
 <h1>@ViewData["Title"]</h1>
 <h2>From patial view </h2>
-
+@* 
 @foreach (var student in Model)
 {
     <partial name= "SimpleBaseSchool" model=student/>
-}
+} *@
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Id</td>
+            </tr>
+        }
+    </tbody>
+</table>
