@@ -1,0 +1,19 @@
+@* @model List<BaseSchool> *@
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.Name</td>
+                <td>@obj.Id</td>
+            </tr>
+        }
+    </tbody>
+</table>

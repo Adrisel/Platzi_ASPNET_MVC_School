@@ -12,20 +12,4 @@
     <partial name= "SimpleBaseSchool" model=student/>
 } *@
 
-<table class="table table-dark table-hover">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Id</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var student in Model)
-        {
-            <tr>
-                <td>@student.Name</td>
-                <td>@student.Id</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<partial name="TableBaseSchoolObject"/>

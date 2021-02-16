@@ -7,7 +7,8 @@
 <h1>@ViewData["Title"]</h1>
 <h2>From patial view </h2>
 
-@foreach (var subject in Model)
+@* @foreach (var subject in Model)
 {
     <partial name= "SimpleBaseSchool" model=subject/>
-}
+} *@
+<partial name="TableBaseSchoolObject"></partial>
