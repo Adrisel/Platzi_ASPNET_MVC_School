@@ -8,19 +8,20 @@ namespace SchoolMVC.Controllers
 {
     public class StudentController : Controller
     {
+        private SchoolContext _context;
+        public StudentController(SchoolContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            var student = new Student() { Name = "Adriana Selena" };
-
             ViewBag.Date = DateTime.Now;
-            return View(student);
+            return View(_context.Students.FirstOrDefault());
         }
 
         public IActionResult MultipleStudent()
         {
-             List<Student> studentList = GenerateStudents(30);
-            return View(studentList);
+            return View(_context.Students.ToList());
         }
-
     }
 }

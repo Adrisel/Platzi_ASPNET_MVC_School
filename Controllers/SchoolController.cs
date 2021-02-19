@@ -16,7 +16,7 @@ namespace SchoolMVC.Controllers
         {
             var temp = _context.Schools.FirstOrDefault();
             ViewBag.SomethingStrange = "This comes from controller";
-            return View(school);
+            return View(temp);
         }
     }
 }
