@@ -12,6 +12,8 @@ namespace SchoolMVC.Models
         public List<Subject> Subjects { get; set; }
         public List<Student> Students { get; set; }
         public string Address { get; set; }
+        public string SchoolId { get; set; }
+        public School School { get; set; }
 
         public void CleanPlace()
         {
@@ -20,7 +22,7 @@ namespace SchoolMVC.Models
 
         public void AddStudent(string name)
         {
-            Students.Add(new Student() { Name = name, Tests = new List<Test>()});
+            Students.Add(new Student() { Name = name, Tests = new List<Test>() });
             ///I want to notify that a user was added
             OnProcessCompleted(EventArgs.Empty);
         }
@@ -28,7 +30,7 @@ namespace SchoolMVC.Models
         protected virtual void OnProcessCompleted(EventArgs e)
         {
             //Invoke the event and some class can suscribe to this event in this case School
-            StudentAddedProcessCompleted?.Invoke(this,e);
+            StudentAddedProcessCompleted?.Invoke(this, e);
         }
     }
 }
