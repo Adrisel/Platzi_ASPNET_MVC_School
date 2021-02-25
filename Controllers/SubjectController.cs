@@ -13,10 +13,21 @@ namespace SchoolMVC.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+
+        //[Route("Subject/Index")]
+        [Route("Subject/Index/{subjectId?}")]
+        public IActionResult Index(string subjectId)
         {
-            ViewBag.Date = DateTime.Now;
-            return View(_context.Subject.First());
+            if(!string.IsNullOrWhiteSpace(subjectId))
+            {
+                var subject = _context.Subject.FirstOrDefault(x => x.Id == subjectId);
+                ViewBag.Date = DateTime.Now;
+                return View(subject);
+            }
+            else 
+            {
+                return View("MultipleSubject", _context.Subject.ToList());
+            }
         }
 
         public IActionResult MultipleSubject()
