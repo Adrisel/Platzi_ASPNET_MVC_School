@@ -47,7 +47,8 @@ namespace SchoolMVC.Controllers
                 course.SchoolId = school.Id;
                 _context.Courses.Add(course);
                 _context.SaveChanges();
-                return View();
+                 ViewBag.ExtraMessage = $"Created Course {course.Name}";
+                return View("Index", course);
             }
             else
             {
