@@ -1,0 +1,15 @@
+@model List<Course>
+
+@{
+    ViewData["Title"] = "Multiple Course Information";
+    Layout = "_SimpleLayout";
+}
+<h1>@ViewData["Title"]</h1>
+<h2>From patial view </h2>
+@* 
+@foreach (var student in Model)
+{
+    <partial name= "SimpleBaseSchool" model=student/>
+} *@
+
+<partial name="TableBaseSchoolObject"/>

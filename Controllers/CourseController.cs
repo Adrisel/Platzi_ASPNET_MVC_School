@@ -6,10 +6,10 @@ using SchoolMVC.Models;
 
 namespace SchoolMVC.Controllers
 {
-    public class StudentController : Controller
+    public class CourseController : Controller
     {
         private SchoolContext _context;
-        public StudentController(SchoolContext context)
+        public CourseController(SchoolContext context)
         {
             _context = context;
         }
@@ -17,19 +17,19 @@ namespace SchoolMVC.Controllers
         {
              if(!string.IsNullOrWhiteSpace(id))
             {
-                var student = _context.Students.FirstOrDefault(x => x.Id == id);
+                var course = _context.Courses.FirstOrDefault(x => x.Id == id);
                 ViewBag.Date = DateTime.Now;
-                return View(student);
+                return View(course);
             }
             else 
             {
-                return View("MultipleStudent", _context.Students.ToList());
+                return View("MultipleCourse", _context.Courses.ToList());
             }
         }
 
-        public IActionResult MultipleStudent()
+        public IActionResult MultipleCourse()
         {
-            return View(_context.Students.ToList());
+            return View(_context.Courses.ToList());
         }
     }
 }
