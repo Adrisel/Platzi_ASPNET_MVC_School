@@ -17,7 +17,10 @@
     </div>
     <div>
         <label asp-for="TurnType"></label>
-        <input asp-for="TurnType">
+        @Html.DropDownList("Jornada",
+                             Html.GetEnumSelectList<TurnType>(),
+                            "Select a Turn",
+                            new {@class = "form-control"});
     </div>
 
     <input type="submit">
