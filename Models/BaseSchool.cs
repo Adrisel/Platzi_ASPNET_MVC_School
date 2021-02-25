@@ -3,7 +3,8 @@ namespace SchoolMVC.Models
 {
     public abstract class BaseSchool
     {
-        public string Name { get; set; }
+        //This is virtual because can be override for derived classes
+        public virtual string Name { get; set; }
         public string  Id { get; private set; }
         public BaseSchool()
         {

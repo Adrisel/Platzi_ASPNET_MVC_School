@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SchoolMVC.Models
 {
@@ -14,6 +15,9 @@ namespace SchoolMVC.Models
         public string Address { get; set; }
         public string SchoolId { get; set; }
         public School School { get; set; }
+        
+        [Required]
+        public override string Name { get; set; }
 
         public void CleanPlace()
         {
