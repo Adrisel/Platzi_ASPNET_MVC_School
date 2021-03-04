@@ -12,11 +12,14 @@ namespace SchoolMVC.Models
         public TurnType TurnType { get; set; }
         public List<Subject> Subjects { get; set; }
         public List<Student> Students { get; set; }
+        [Required(ErrorMessage = "The Address is required")]
+        [StringLength(12, ErrorMessage = "Address should be more than 12 characters")]
         public string Address { get; set; }
         public string SchoolId { get; set; }
         public School School { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "The course name is required")]
+        [MinLength(5, ErrorMessage = "The name should be less than 5 characters")]
         public override string Name { get; set; }
 
         public void CleanPlace()

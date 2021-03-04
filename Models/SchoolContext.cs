@@ -47,11 +47,11 @@ namespace SchoolMVC.Models
         {
             return new List<Course>
             {
-               new Course(){ Name = "101",TurnType = TurnType.Morning, SchoolId = school.Id},
-               new Course(){ Name = "201",TurnType = TurnType.Morning, SchoolId = school.Id},
-               new Course(){ Name = "301",TurnType = TurnType.Morning, SchoolId = school.Id},
-               new Course(){ Name = "401",TurnType = TurnType.Morning, SchoolId = school.Id},
-               new Course(){ Name = "501",TurnType = TurnType.Morning, SchoolId = school.Id}
+               new Course(){ Name = "101",TurnType = TurnType.Morning, SchoolId = school.Id, Address = "Custom Address"},
+               new Course(){ Name = "201",TurnType = TurnType.Morning, SchoolId = school.Id, Address = "Custom Address"},
+               new Course(){ Name = "301",TurnType = TurnType.Morning, SchoolId = school.Id, Address = "Custom Address"},
+               new Course(){ Name = "401",TurnType = TurnType.Morning, SchoolId = school.Id, Address = "Custom Address"},
+               new Course(){ Name = "501",TurnType = TurnType.Morning, SchoolId = school.Id, Address = "Custom Address"}
             };
         }
 
